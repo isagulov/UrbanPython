@@ -1,12 +1,26 @@
-grades = [[5, 3, 3, 5, 4], [2, 2, 2, 3], [4, 5, 5, 2], [4, 4, 3], [5, 5, 5, 4, 5]]
-students = {'Johnny', 'Bilbo', 'Steve', 'Khendrik', 'Aaron'}
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+primes = []
+not_primes =[]
 
-sorted_students = sorted(students)
+for i in numbers:
 
-middle_grade = {}
-middle_grade['Aaron'] = sum(grades[0]) / len(grades[0])
-middle_grade['Bilbo'] = sum(grades[1]) / len(grades[1])
-middle_grade['Johny'] = sum(grades[2]) / len(grades[2])
-middle_grade['Khendrik'] = sum(grades[3]) / len(grades[3])
-middle_grade['Steve'] = sum(grades[4]) / len(grades[4])
-print(middle_grade)
+    if i < 2:
+        # это исключения для 1
+        not_primes.append(i)
+        continue
+
+    is_prime = True
+    for j in range(2, i):
+
+        if i % j == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        primes.append(i)
+    else:
+        not_primes.append(i)
+
+print(primes)
+print(not_primes)
+
