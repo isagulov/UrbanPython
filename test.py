@@ -12,3 +12,4 @@ for i in string:
 
 print("Гласные:", count_vowel)
 print("Согласные:", count_consonant)
+print("Пробую создать вторую версию")
