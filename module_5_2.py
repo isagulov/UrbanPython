@@ -1,4 +1,4 @@
-#Тут будез ДЗ по модулю 5.1
+#Тут будез ДЗ по модулю 5.2
 class House:
     def __init__(self, name, number_of_floors):
         self.name = name
