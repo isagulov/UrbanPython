@@ -11,8 +11,8 @@ def personal_sum(numbers):
 
 def calculate_average(numbers):
     try:
-        if not isinstance(numbers, (list, tuple, set)):
-            raise TypeError("Некорректный тип данных")
+        for i in numbers:
+            pass
         total, incorrect_count = personal_sum(numbers)
         try:
             average = total / (len(numbers) - incorrect_count)
@@ -23,8 +23,8 @@ def calculate_average(numbers):
         print("В numbers записан некорректный тип данных")
         return None
 
-
-print(f'Результат 1: {calculate_average("1, 2, 3")}')
-print(f'Результат 2: {calculate_average([1, "Строка", 3, "Ещё Строка"])}')
-print(f'Результат 3: {calculate_average(567)}')
-print(f'Результат 4: {calculate_average([42, 15, 36, 13])}')
+# Тестируем функции
+print(f'Результат 1: {calculate_average("1, 2, 3")}')  # Строка перебирается, символы не числа
+print(f'Результат 2: {calculate_average([1, "Строка", 3, "Ещё Строка"])}')  # Суммируются только 1 и 3
+print(f'Результат 3: {calculate_average(567)}')  # Не коллекция, ошибка
+print(f'Результат 4: {calculate_average([42, 15, 36, 13])}')  # Всё корректно
