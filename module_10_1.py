@@ -8,6 +8,7 @@ def write_words(word_count, file_name):
             sleep(0.1)  # Пауза 0.1 секунды
     print(f"Завершилась запись в файл {file_name}")
 
+
 start_time = time()
 write_words(10, 'example1.txt')
 write_words(30, 'example2.txt')
