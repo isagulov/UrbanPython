@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+# изучить matrolib, pillow, pandas
 
 # URL для запроса
 url = "https://jsonplaceholder.typicode.com/posts"
